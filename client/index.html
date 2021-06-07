@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body class="h-screen bg-gray-800 text-white"> 
+    <div class="max-w-[1500px] mx-auto p-2">
+        <h1 class="text-4xl text-center py-5">Socket.io</h1>
+        <div class="max-w-xl mx-auto">
+            <div class="text-center uppercase h-10 flex items-center justify-center bg-gray-700 rounded-t-lg" id="roomNameContainer">
+                <span class="normal-case"></span>
+            </div>
+            <div class="bg-gray-600 p-2 rounded-b-lg h-52">
+                <div class="h-full overflow-y-auto flex flex-col px-2" id="messageContainer">
+                    <div class="px-3 py-1 rounded-xl max-w-max my-1 mb-1 bg-blue-600 self-end hidden"></div>
+                </div>
+            </div>
+            <form class="flex my-5" id="messageForm">
+                <input type="text" id="message" class="flex-1 rounded-tl-md rounded-bl-md p-1 text-black focus:outline-none focus:ring" placeholder="Your Message">
+                <button class="focus:outline-none rounded-tr-md rounded-br-md focus:ring bg-blue-700 px-2 py-2">SEND</button>
+            </form>
+            <form class="flex my-5" id="roomForm">
+                <input type="text" id="room" class="flex-1 rounded-tl-md rounded-bl-md p-1 text-black focus:outline-none focus:ring" placeholder="Room Name">
+                <button class="focus:outline-none rounded-tr-md rounded-br-md focus:ring bg-gray-700 px-2 py-2">Join Room</button>
+            </form>
+        </div>
+        </div>    
+    </div>
+
+    <!-- socket.io -->
+    <script src="/socket.io/socket.io.js"></script>
+
+    <!-- app.js -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
