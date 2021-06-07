@@ -6,7 +6,7 @@
   "scripts": {
     "build_css": "postcss src/style.css -o client/style.css -w",
     "dev": "nodemon server.js",
-    "start": "serve client/"
+    "start": "node server.js"
   },
   "author": "ridoy",
   "license": "ISC",
